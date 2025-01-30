@@ -15,15 +15,13 @@ export class Profile {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'text' })
-  bio: string;
 
   @Column({ type: 'boolean', default: true })
   isActive: boolean;
   
   @Column({ type: 'enum', enum: Status, default: Status.ACTIVE })
   status: Status;
-  
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
